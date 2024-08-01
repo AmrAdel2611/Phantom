@@ -1,0 +1,327 @@
+body {
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* style.css */
+.main {
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+    min-height: 100vh; /* full viewport height */
+    height: auto;
+}
+
+
+.welcome-container, .container {
+    width: 800px;
+    min-height: 600px;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-container button{
+    margin-top: 30px;
+    width: 65%;
+    font-size: 1.2rem;
+}
+
+.welcome-container img{
+    width: 300px;
+}
+
+h1, h2 {
+    color: #FFFFFF;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+input[type="text"], input[type="time"], select {
+    font-size: 1.3rem;
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2d4c60cc;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator{
+    filter: brightness(0) invert(1);
+}
+
+button {
+    background-color: #384e5ccc;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-btns {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.scheduleCategortInput {
+    width: 50%;
+    margin: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.habit-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.scheduleHabitInput {
+    font-size: 1.2rem;
+    width: calc(50% - 10px); /* Adjust width to fit two buttons side by side */
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.scheduleHabitInput:nth-child(3) {
+    width: calc(100% - 10px); /* Make the third button full width */
+}
+
+button:hover {
+    background-color: #0055a5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #3E3E3E;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li span {
+    display: flex;
+    flex-direction: column;
+}
+
+li button {
+    margin-left: 10px;
+}
+
+.category {
+    margin: 20px 0;
+}
+
+.category h3 {
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 576px) {
+    .welcome-container, .container {
+        margin: 20px;
+        padding: 10px;
+        background-color: #3E3E3E;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+
+    .welcome-container img {
+        width: 200px;
+    }
+    
+    .startTracking {
+        width: 100%;
+    }
+
+    .scheduleHabitInput {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .scheduleMakerInput {
+        width: 100%;
+        margin: 5px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .welcome-container, .container {
+        margin: 20px;
+        padding: 10px;
+        background-color: #3E3E3E;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+
+    .welcome-container img {
+        width: 200px;
+    }
+    
+    .startTracking {
+        width: 100%;
+    }
+
+    .habit-btns {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .scheduleHabitInput {
+        font-size: .8rem;
+        width: 50%;
+        margin: 5px;
+    }
+
+    .scheduleHabitInput:nth-child(3) {
+        width: 50%; /* Make the third button full width */
+    }
+
+    .scheduleCategortInput {
+        font-size: .8rem;
+        width: 100%;
+        margin: 5px;
+    }
+
+    .scheduleMaker-btns {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .scheduleMakerInput {
+        font-size: .8rem;
+        width: 100%;
+        margin: 5px;
+    }
+
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body, .main {
+    background: linear-gradient(-45deg, rgba(2,0,36,1) , rgba(9,70,121,1), rgba(0,212,255,1));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Changed from 15s to 8s */
+    /* Keep your existing body styles */
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjust the container background for better contrast */
+.welcome-container, .container {
+    background-color: #546e7fcc; /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+    /* Keep other existing styles */
+}
+
+.scheduleCategortInput,
+.scheduleHabitInput,
+.startTracking,
+.scheduleMakerInput {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.scheduleCategortInput:hover,
+.scheduleHabitInput:hover,
+.startTracking:hover,
+.scheduleMakerInput:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    background-color: #0055a5;
+}
+
+/* Active state */
+.scheduleCategortInput:active,
+.scheduleHabitInput:active,
+.startTracking:active,
+.scheduleMakerInput:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.3s linear;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 51, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 51, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 51, 102, 0);
+    }
+}
+
+.scheduleCategortInput,
+.scheduleHabitInput,
+.startTracking,
+.scheduleMakerInput {
+    animation: pulse 2s infinite;
+}
